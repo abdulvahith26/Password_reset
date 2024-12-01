@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const Resetpage = () => {
+const ResetPage = () => {
   const [email, setEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -42,7 +42,15 @@ const Resetpage = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
         <h1 className="text-2xl font-bold text-center mb-4">Reset Password</h1>
-        {message && <p className={`text-center mb-4 ${message.includes("successful") ? "text-green-500" : "text-red-500"}`}>{message}</p>}
+        {message && (
+          <p
+            className={`text-center mb-4 ${
+              message.includes("successful") ? "text-green-500" : "text-red-500"
+            }`}
+          >
+            {message}
+          </p>
+        )}
         <form onSubmit={handleResetPassword} className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -98,4 +106,4 @@ const Resetpage = () => {
   );
 };
 
-export default Resetpage;
+export default ResetPage;
