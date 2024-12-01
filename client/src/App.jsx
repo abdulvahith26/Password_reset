@@ -12,8 +12,8 @@ function App() {
         <Routes>
           <Route path="/" element={< HomePage/>} />
           <Route path="/register" element={ <RegisterPage/>} />
-          <Route path="https://aesthetic-starburst-228c64.netlify.app/forgotpassword" element ={<ForgotPage/>  } />
-          <Route path="https://aesthetic-starburst-228c64.netlify.app/resetpassword/:token" element ={ <Resetpage />}  />
+          <Route path="/forgotpassword" element ={<ForgotPage/>  } />
+          <Route path="/resetpassword/:token" element ={ <Resetpage />}  />
         </Routes>
     </Router> 
   );
