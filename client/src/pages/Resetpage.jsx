@@ -98,4 +98,4 @@ const ResetPage = () => {
   );
 };
 
-export default ResetPage ;
+export default ResetPage;
