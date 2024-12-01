@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const ResetPage = () => {
+const Resetpage = () => {
   const [email, setEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -98,4 +98,4 @@ const ResetPage = () => {
   );
 };
 
-export default ResetPage;
+export default Resetpage;
