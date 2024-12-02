@@ -144,7 +144,31 @@ const authController = {
                 from: 'vahithtask@gmail.com' ,  // Sender email
                 to: email, // Recipient email
                 subject: "Password Reset Request",
-                text: `Click the following link to reset your password:${resetLink}) \n\nThis link is valid for 1 hour.`,
+                html: `
+                <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+                  <h2 style="color: #4CAF50; text-align: center;">Password Reset Request</h2>
+                  <p>Hello,</p>
+                  <p>You requested to reset your password. Please click the button below to reset it:</p>
+                  <a href="${resetLink}" style="
+                    display: inline-block;
+                    margin-top: 15px;
+                    padding: 12px 25px;
+                    font-size: 18px;
+                    color: #fff;
+                    background-color: #4CAF50;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    text-align: center;
+                  ">Reset Password</a>
+                  <p style="margin-top: 20px;">This link is valid for 1 hour.</p>
+                  <p>If you did not request this, please ignore this email.</p>
+                  <hr />
+                  <p style="font-size: 12px; color: #777;">
+                    If the button doesn't work, copy and paste the following link into your browser:<br />
+                    <a href="${resetLink}" style="color: #4CAF50;">${resetLink}</a>
+                  </p>
+                </div>
+              `
             };
               
 
