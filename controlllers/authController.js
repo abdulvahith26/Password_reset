@@ -137,7 +137,7 @@ const authController = {
 
 
             // Reset link
-            const resetLink = `https://resplendent-nasturtium-e2bcd4.netlify.app/${resetToken}`;
+            const resetLink = `https://merry-panda-2b7423.netlify.app/resetpassword/${resetToken}`;
 
             // Email options
             const mailOptions = {
