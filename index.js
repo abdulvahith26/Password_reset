@@ -6,17 +6,17 @@ const cors = require('cors')
 require('dotenv').config(); 
 
 const PORT = process.env.PORT || 3001;
-const MONGO_URL = process.env.MONGO_URL;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 
 
 // connect to the database
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(MONGODB_URI)
     .then(() => {
         console.log('Connected to the database!');
 
         // listen for requests
-        app.listen(process.env.PORT, () => {
+        app.listen(PORT, () => {
             console.log (`Server is running @ http://localhost:3001`);
         });
     })
