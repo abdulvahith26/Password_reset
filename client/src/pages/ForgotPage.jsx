@@ -15,7 +15,8 @@ const ForgotPage = () => {
 
     try {
       // Send email to the server
-      const response = await axios.post(`http://localhost:3001/api/v1/auth/forgotpassword`,{email});  
+      const response = await axios.post(`https://password-reset-1-0x9e.onrender.com/api/v1/auth/forgotpassword`,{email});  
+      
       // if (response.data) {
       //   // Navigate to ResetPassword page if the email is sent successfully
       //   navigate("/resetpassword");
